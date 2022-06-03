@@ -1,3 +1,4 @@
+# This file is replaced by main.py file. So ignore this one. 
 from flask import Flask
 
 app = Flask(__name__)
