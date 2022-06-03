@@ -1,4 +1,9 @@
-## Create a file "Dockerfile" with below content
+## This ia a simple Flask App having circleCI CI/CD pipeline and deployed on Heroku cloud using Docker container  
+  
+### Click to see deployed app @ [heroku cloud](https://wafercircleci-main.herokuapp.com/)
+
+### Followed following steps for deployment :-
+#### Create a file "Dockerfile" with below content
 
 ```
 FROM python:3.7
@@ -9,12 +14,12 @@ ENTRYPOINT [ "python" ]
 CMD [ "main.py" ]
 ```
 
-## Create a "Procfile" with following content
+#### Create a "Procfile" with following content
 ```
 web: gunicorn main:app
 ```
 
-## create a file ".circleci\config.yml" with following content
+#### create a file ".circleci\config.yml" with following content
 ```
 version: 2.1
 orbs:
@@ -92,13 +97,13 @@ workflows:
               only:
                 - main
 ```
-## to create requirements.txt
+#### to create requirements.txt
 
 ```buildoutcfg
 pip freeze>requirements.txt
 ```
 
-## initialize git repo
+#### initialize git repo
 
 ```
 git init
@@ -109,15 +114,15 @@ git remote add origin <github_url>
 git push -u origin main
 ```
 
-## create a account at circle ci
+#### create a account at circle ci
 
 <a href="https://circleci.com/login/">Circle CI</a>
 
-## setup your project 
+#### setup your project 
 
 <a href="https://app.circleci.com/projects/github/Avnish327030/setup/"> Setup project </a>
 
-## Select project setting in CircleCI and below environment variable
+#### Select project setting in CircleCI and below environment variable
 
 ```
 DOCKERHUB_USER
@@ -129,7 +134,7 @@ DOCKER_IMAGE_NAME=wafercircle3270303
 ```
 
 
-## to update the modification
+#### to update the modification
 
 ```
 git add .
